@@ -2,12 +2,13 @@ import { generadorDePelicula } from './peliculas';
 import { buscarPeliculaByNombre } from './buscarPeliculaByNombre';
 
 let peliculaEncontrada = buscarPeliculaByNombre();
-contenedor.innerHTML = ""; 
+let contenedor = document.getElementById("contenedor-pelicula");
+contenedor.innerHTML = "";
 
 if (peliculaEncontrada == null) {
   // Mostrar todas las películas
-  for (let index = 0; index < movies.length; index++) {
-    const movie = movies[index];
+  for (let i = 0; i < movies.length; i++) {
+    const movie = movies[i];
     contenedor.innerHTML +=
       '<div class="pelicula">' +
         '<img src="' + movie.imagen + '" alt="' + movie.nombre + '">' +
