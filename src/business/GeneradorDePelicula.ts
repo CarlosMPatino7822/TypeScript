@@ -1,4 +1,4 @@
-import { PeliculaEntity } from "./model/PeliculaEntity";
+import { PeliculaEntity } from "../model/PeliculaEntity";
 
 const pelicula1 = new PeliculaEntity(
     "Inception",
