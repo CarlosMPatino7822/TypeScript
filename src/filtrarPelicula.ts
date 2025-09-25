@@ -1,16 +1,18 @@
-import { peliculas } from "./GeneradorDePelicula";
+import { peliculas, Pelicula } from "./GeneradorDePelicula";
 
-export function buscarPeliculaByNombre(): void {
+export function buscarPeliculaByNombre(): boolean { 
     const contenedor = document.getElementById("contenedor") as HTMLElement | null;
-    if (!contenedor) return;
+    if (!contenedor) return false;
 
     contenedor.innerHTML = "";
 
     const input = document.getElementById("filtrar") as HTMLInputElement | null;
-    const nombrePeli: string = input?.value ?? "";
+    const nombrePeli: string = input?.value.trim() ?? "";
+
+    let encontrado = false;
 
     for (let i = 0; i < peliculas.length; i++) {
-        const movie = peliculas[i];
+        const movie: Pelicula = peliculas[i];
         if (movie && movie.nombre === nombrePeli) {
             contenedor.innerHTML += `
                 <div class="pelicula">
@@ -26,6 +28,9 @@ export function buscarPeliculaByNombre(): void {
                     </div>
                 </div>
             `;
+            encontrado = true;
         }
     }
+
+    return encontrado;
 }
