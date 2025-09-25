@@ -1,4 +1,4 @@
-import { peliculas, Pelicula } from "./GeneradorDePelicula";
+import { peliculas } from "./GeneradorDePelicula";
 
 export function buscarPeliculaByNombre(): boolean { 
     const contenedor = document.getElementById("contenedor") as HTMLElement | null;
@@ -12,7 +12,7 @@ export function buscarPeliculaByNombre(): boolean {
     let encontrado = false;
 
     for (let i = 0; i < peliculas.length; i++) {
-        const movie: Pelicula = peliculas[i];
+        const movie = peliculas[i];
         if (movie && movie.nombre === nombrePeli) {
             contenedor.innerHTML += `
                 <div class="pelicula">
