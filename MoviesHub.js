@@ -149,8 +149,6 @@ function buscarPeliculaByNombre() {
 
 }
 
-
-
 /*function buscarPeliculaByNombre() {
     
     console.log("Pelicula no encontrada");

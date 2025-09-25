@@ -4,8 +4,6 @@ import { buscarPeliculaByNombre } from './buscarPeliculaByNombre';
 let peliculaEncontrada = buscarPeliculaByNombre();
 contenedor.innerHTML = ""; 
 
-
-
 if (peliculaEncontrada == null) {
   // Mostrar todas las películas
   for (let index = 0; index < movies.length; index++) {
