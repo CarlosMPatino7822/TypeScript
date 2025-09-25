@@ -4,67 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Películas</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f4;
-      padding: 20px;
-      font-size: 25px;
-    }
-    .pelicula {
-      background: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 15px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      display: flex;
-      align-items: flex-start;
-    }
-    .pelicula img {
-      width: 120px;
-      height: auto;
-      border-radius: 8px;
-      margin-right: 15px;
-    }
-    .pelicula h2 {
-      margin: 0;
-      color: #333;
-    }
-    .pelicula p {
-      margin: 5px 0;
-      color: #555;
-    }
-    section{
-      background: rgb(183, 184, 185);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    button{
-      background-color: #715475;
-      width: 200px;
-      height: 25px;
-      margin: 3px auto;
-      border-radius: 25px;
-      padding: 25px;
-    }
-    button:hover{
-      background-color: linear-gradient(130deg, #755465, #708dc7);
-      font-weight: bold;
-      color: black; /*color de la letra*/
-    }
-  </style>
+
+  <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-  <section> <!--Sección ver listado películas-->
-  <h1>Lista de Películas</h1>
-  <div id="contenedor"></div>
-  <textarea name="pelicula" id="filtrar"></textarea>
-  <button onclick="buscarPeliculaByNombre()">filtrar</button>
-  <button onclick="mostrarPeliculas()">mostrar todas</button>
-  <script type ="module" src="dist/index.js"></script>
-  <p></p>
+  <section> <!--Sección principal-->
+    <h1>MoviesHub 🎬</h1>
+    <div class="contenedor-busqueda">
+      <input type="text" id="inputBuscar" placeholder="🔎Buscar pelicula por nombre">
+      <button onclick="buscarPeliculaByNombre()">Buscar</button>
+      <button onclick="mostrarPeliculas()">mostrar todas</button>
+    </div>
   </section>
+
+  <div id="contenedor"></div> <!--Sección donde se muestran las peliculas-->
+  <textarea name="pelicula" id="filtrar" style="display: none;"></textarea> <!--style="display: none; es para ocultar el textarea mientras-->
+
+  <script type="module" src="dist/index.js"></script>
+  <p></p>
+
 </body>
 
 </html>
