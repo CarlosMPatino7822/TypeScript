@@ -1,19 +1,18 @@
 import { peliculas } from "./GeneradorDePelicula";
 
-export function buscarPeliculaByNombre(): boolean { 
+export function buscarPeliculaByNombre(): void {
     const contenedor = document.getElementById("contenedor") as HTMLElement | null;
-    if (!contenedor) return false;
+    if (!contenedor) return;
 
     contenedor.innerHTML = "";
 
     const input = document.getElementById("filtrar") as HTMLInputElement | null;
-    const nombrePeli: string = input?.value.trim() ?? "";
-
-    let encontrado = false;
+    const nombrePeli: string = input?.value ?? "";
 
     for (let i = 0; i < peliculas.length; i++) {
-        const movie = peliculas[i];
-        if (movie && movie.nombre === nombrePeli) {
+        const pelicula = peliculas[i];
+        if (pelicula && pelicula.nombre === nombrePeli) {
+            const movie = pelicula;
             contenedor.innerHTML += `
                 <div class="pelicula">
                     <img src="${movie.imagen}" alt="${movie.nombre}">
@@ -28,9 +27,9 @@ export function buscarPeliculaByNombre(): boolean {
                     </div>
                 </div>
             `;
-            encontrado = true;
+        }
+        else {
+            contenedor.innerHTML = "<p>Papito no existe</p>";
         }
     }
-
-    return encontrado;
 }
