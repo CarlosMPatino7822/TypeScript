@@ -108,3 +108,12 @@
         font-weight: bold;
         color: black; /*color de la letra*/
     }
+
+    .contenedor {
+      display: flex; /* pone los elementos en la misma línea */
+      grid-template-columns: 150px 1fr;       
+      align-items: center; /* alinea verticalmente */
+      gap: 10px;           /* espacio entre ellos */
+      margin: 10px auto;
+      max-width: 400px;
+    }
