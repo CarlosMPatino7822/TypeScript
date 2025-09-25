@@ -5,20 +5,20 @@
   <meta charset="UTF-8">
   <title>Películas</title>
 
-  <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Style.css">
 
 </head>
 
 <body>
 
   <section> <!--Sección principal-->
-    <button class="cuenta" onclick="IniciarSesion()"><i class="fa-chisel fa-regular fa-circle-user fa-xl"></i></button>
+    <!--<button class="cuenta" onclick="IniciarSesion()"><i class="fa-chisel fa-regular fa-circle-user fa-xl"></i></button>-->
     <h1>MoviesHub 🎬</h1>
-    <div class="contenedor-menu">
-      <input type="text" id="inputBuscar" placeholder="🔎Buscar pelicula por nombre">
-      <button onclick="buscarPeliculaByNombre()">Buscar</button>
-      <button onclick="mostrarPeliculas()">mostrar todas</button>
+    <div id="contenedor" class="contenedor-menu">
+      <input type="text" id="filtrar" placeholder="🔎Buscar pelicula por nombre">
+      <button id="btn-filtrar">Buscar</button>
+      <button id="btn-mostrar-todas" >mostrar todas</button>
       
     </div>
   </section>
@@ -27,7 +27,7 @@
   <div id="contenedor-pelicula" class="resultado-peliculas"></div> <!--Sección donde se muestran las peliculas-->
   <textarea name="pelicula" id="filtrar" style="display: none;"></textarea> <!--style="display: none; es para ocultar el textarea mientras-->
 
-  <script type="module" src="dist/index.js"></script>
+  <script type="module" src="../dist/peliculas.js"></script>
   <p></p>
 
 </body>

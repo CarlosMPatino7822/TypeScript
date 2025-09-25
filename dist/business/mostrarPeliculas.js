@@ -1,6 +1,6 @@
 import { peliculas } from './GeneradorDePelicula';
 import { PeliculaEntity } from '../model/PeliculaEntity';
-let contenedor = document.getElementById("contenedor-pelicula");
+let contenedor = document.getElementById("contenedor");
 contenedor.innerHTML = "";
 let movies = peliculas;
 let movie;

@@ -30,4 +30,6 @@ export function buscarPeliculaByNombre() {
             contenedor.innerHTML = "<p>Papito no existe</p>";
         }
     }
+    window.scrollTo(0, document.body.scrollHeight);
+    window.location.reload();
 }
