@@ -1,12 +1,13 @@
 import { peliculas } from './GeneradorDePelicula';
-import { buscarPeliculaByNombre } from './buscarPeliculaByNombre';
+import { buscarPeliculaByNombre } from './filtrarPelicula';
 import {PeliculaEntity} from './model/PeliculaEntity';
 
 let peliculaEncontrada = buscarPeliculaByNombre();
 
 let contenedor = document.getElementById("contenedor-pelicula") as HTMLElement;
 contenedor.innerHTML = ""; 
- let movies = generadorDePelicula();
+ let movies = peliculas;
+
 if (peliculaEncontrada == null) {
   // Mostrar todas las películas
   for (let index = 0; index < movies.length; index++) {
