@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi cuenta</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <section> <!--Sección principal-->
+        <button class="cuenta" onclick="IniciarSesion()"><i
+                class="fa-chisel fa-regular fa-circle-user fa-xl"></i></button>
+        <h1>MoviesHub 🎬</h1>
+        <div class="contenedor-menu">
+        </div>
+    </section>
+
+    <section> <!--Sección Mi cuenta-->
+
+        <div class="contenedor">
+            <p>Nombre:</p>
+            <input type="text" id="nombreUser" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="contenedor">
+            <p>Apellido:</p>
+            <input type="text" id="ApellidoUser" placeholder="Ingresa tu apellido">
+        </div>
+        <div class="contenedor">
+            <p>Edad:</p>
+            <input type="number" id="EdadUser" placeholder="Ingresa tu edad">
+        </div>
+        <div class="contenedor">
+            <p>Dirección:</p>
+            <input type="text" id="DireccionUser" placeholder="Ingresa tu dirección">
+        </div>
+        <div class="contenedor">
+            <p>Pelicula favorita:</p>
+            <input type="text" id="PeliculaFavorita" placeholder="Ingresa el nombre de tu peli favorita">
+        </div>
+        <button>Editar mi info</button>
+    </section>
+
+
+    <div id="contenedor-pelicula" class="resultado-peliculas"></div> <!--Sección donde se muestran las peliculas-->
+    <textarea name="pelicula" id="filtrar" style="display: none;"></textarea>
+    <!--style="display: none; es para ocultar el textarea mientras-->
+
+    <script type="module" src="dist/index.js"></script>
+    <p></p>
+
+</body>
+
+</html>
